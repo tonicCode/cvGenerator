@@ -10,12 +10,28 @@ import { CommonModule } from '@angular/common';
 //   ]
 // })
 
+
+export interface PersonnalInfo{
+
+firstName:string;
+lastName:string;
+
+
+
+
+}
+
+
+
+
+
+
 export interface Experiences {
 
-company:string;
-years : string;
-startDate:string;
-endDate?:string;
+company:string | null;
+years : string | null;
+startDate:string | null;
+endDate?:string | null;
 
 
 

@@ -1,0 +1,33 @@
+<p>data works!</p>
+
+
+<form [formGroup]="loginForm" (ngSubmit)="toValidForm()"    >firstName :
+<input type="nom" formControlName="nom">
+
+<br>lastName:
+<input type="prenom" formControlName="prenom">
+
+<br> Profession :
+<input type="profession" formControlName="profession" >
+
+<br> Experiences Names:
+<input type="experiencesNames" formControlName="experiencesNames" >
+<button type="submit">submit</button>
+<br> Experiences Years
+<input type="experiencesYears" formControlName="experiencesYears"> 
+<button type="submit">submit</button>
+
+
+<br> Experiences begin :
+<input type="experiencesStart" formControlName="experiencesStart"> 
+<button type="submit">submit</button>
+
+<br> Experiences ending :
+<input type="experiencesEnding" formControlName="experiencesEnding"> 
+<button type="submit">submit</button>
+
+
+
+</form>
+
+
