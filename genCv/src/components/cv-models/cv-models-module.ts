@@ -13,8 +13,8 @@ import { CommonModule } from '@angular/common';
 
 export interface PersonnalInfo{
 
-firstName:string;
-lastName:string;
+firstName:string|null;
+lastName:string|null;
 
 
 
@@ -27,11 +27,13 @@ lastName:string;
 
 
 export interface Experiences {
-
+workstation:string|null;
 company:string | null;
+town:string|null;
 years : string | null;
 startDate:string | null;
 endDate?:string | null;
+mission:string[];
 
 
 

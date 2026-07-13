@@ -1,6 +1,99 @@
-<p>cv-modern works!</p>
 
+
+
+  <h1>CV MODERNE :</h1>
 <div>
+
+
+<div id="visu1">
+   
+@for(data of this.personalInfo; track $index){
+
+    <h1>{{data.firstName}} </h1>
+}
+        <h2> TITRES EX DEVELOPPEUR WEB (poste actu)</h2>
+
+
+
+     <!-- partie experiences professionelles -->
+
+    <h2>EXPERIENCES PROFESSIONELLEs</h2>
+
+   <div id="containerExperiences">
+
+ @for(elem of this.experiences;track $index){
+   
+    <div>
+        <h2>{{elem.workstation}}</h2>
+<p><strong>{{`Entreprise  ${elem.company}` }}</strong> {{` -- ${elem.town}`}}<br>
+{{`${elem.startDate} -- ${elem.endDate}`}}</p>
+
+<ul>
+
+
+@for(miss of elem.mission;track $index){
+
+<li> {{miss}}  </li>
+
+
+
+}
+
+</ul>
+
+</div>
+
+
+}
+
+</div> 
+
+
+
+    <h2>FORMATIONS</h2>
+
+    <h2>COMPETENCES</h2>
+    
+    <h2>LANGUES</h2>
+    
+    <h2>CENTRE D INTERET</h2>
+
+</div>
+
+
+
+
+
+
+<!-- 
+
+<div id="visu2">
+    <h1>CV CLASSIC :</h1>
+
+
+
+
+</div>
+
+
+<div id="visu3">
+    <h1>CV MINIMAL :</h1>
+</div>
+
+
+</div> -->
+
+
+
+
+
+
+
+
+<div> 
+  
+  
+ 
     
     <!-- *ngfor= {{addModernExperiences()}} -->
 

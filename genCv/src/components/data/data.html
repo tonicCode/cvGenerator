@@ -1,18 +1,44 @@
 <p>data works!</p>
 
+<form [formGroup]="infoForm" >firstName :
 
-<form [formGroup]="loginForm" (ngSubmit)="toValidForm()"    >firstName :
-<input type="nom" formControlName="nom">
+
+
+<input type="firstName" formControlName="firstName">
 
 <br>lastName:
-<input type="prenom" formControlName="prenom">
+<input type="lastName" formControlName="lastName">
+</form>
 
-<br> Profession :
-<input type="profession" formControlName="profession" >
 
-<br> Experiences Names:
+
+
+
+<form [formGroup]="loginForm" (ngSubmit)="toValidForm()"    >firstName :
+
+
+<!-- <br> Profession :
+<input type="profession" formControlName="profession" > -->
+
+
+<br> workStations:
+<input type="experiencesPost" formControlName="experiencesPost" >
+<button type="submit">submit</button>
+
+
+
+<br> company:
 <input type="experiencesNames" formControlName="experiencesNames" >
 <button type="submit">submit</button>
+
+
+<br> Town :
+<input type="experiencesTown" formControlName="experiencesTown" >
+<button type="submit">submit</button>
+
+
+
+
 <br> Experiences Years
 <input type="experiencesYears" formControlName="experiencesYears"> 
 <button type="submit">submit</button>
@@ -25,6 +51,12 @@
 <br> Experiences ending :
 <input type="experiencesEnding" formControlName="experiencesEnding"> 
 <button type="submit">submit</button>
+
+
+<br> Main Mission :
+<textarea type="experiencesMission" formControlName="experiencesMission"></textarea> 
+<button type="submit">submit</button>
+
 
 
 

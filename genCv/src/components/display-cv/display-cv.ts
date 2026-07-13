@@ -13,23 +13,23 @@ import { CvServices } from '../../services/cv-services';
 
 export class DisplayCv {
 
-  injectServices: CvServices;
+ 
 
 
-constructor(injectServices : CvServices){
-console.log("hello");
-
-this.injectServices=injectServices;
-
-}
+constructor(private injectServices : CvServices){
 
 
-test(){
-
-// this.injectServices.ajoutExperience();
 
 }
 
+
+// ngInit(){
+
+// this.injectServices.getExperience();
+
+
+
+// }
 
 //   test(){
 // console.log("hello");

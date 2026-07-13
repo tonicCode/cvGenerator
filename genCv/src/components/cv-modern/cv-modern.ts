@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CvServices } from '../../services/cv-services';
-import { Experiences } from '../cv-models/cv-models-module';
+import { Experiences, PersonnalInfo } from '../cv-models/cv-models-module';
 
 @Component({
   selector: 'app-cv-modern',
@@ -11,6 +11,11 @@ import { Experiences } from '../cv-models/cv-models-module';
 export class CvModern {
 
 
+experiences: Experiences[]=[];
+personalInfo:PersonnalInfo[]=[];
+actualCompany: string = "";
+
+
 constructor(private cvServices: CvServices){
 
   console.log('cv modern construit!');
@@ -18,7 +23,9 @@ constructor(private cvServices: CvServices){
 
 ngOnInit() : void{
 
-this.addModernExperiences();
+this.addModernData();
+// this.buildCv();
+console.log("cl de actcompa :", this.actualCompany)
 
 }
 
@@ -28,19 +35,47 @@ this.addModernExperiences();
 
 // ajout des experiences dans le modele moderne
 
-addModernExperiences(){
+addModernData() {
 
 // this.cvServices.getExperience(addExp);
-let exp=this.cvServices.getExperience();
+this.experiences=this.cvServices.getExperience();
+this.personalInfo=this.cvServices.getPersonalInfo();
 
- console.log("addExp dans modern :", exp);
+
+ console.log("addExp dans modern :",this.experiences);
+ console.log("addInfoperso dans modern :",this.personalInfo);
 
 
 }
 
+// buildCv(){
 
+// // title 
+
+// // name emploi 
+// this.experiences.forEach(elem  =>{
+
+
+// this.actualCompany=`Poste : ${elem.company}`;
+
+
+
+
+// });
+
+// ;
+
+
+
+
+//}
+
+
+
+
+}
 
 
   
 
-}
+
